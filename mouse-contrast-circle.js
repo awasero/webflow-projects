@@ -1,3 +1,5 @@
+// Webflow Project and Script created by Awasero. For more information, visit awasero.com. -->
+
 var circle = document.getElementById('circle');
 		document.addEventListener('mousemove', function(event) {
 			var x = event.clientX;
