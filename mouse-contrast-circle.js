@@ -1,18 +1,19 @@
 // Webflow Project and Script created by Awasero. For more information, visit awasero.com. -->
 
-	var circle = document.getElementById('circle');
-	var x = window.innerWidth / 2;
-	var y = window.innerHeight / 2;
-	circle.style.left = x + 'px';
-	circle.style.top = y + 'px';
+var circle = document.getElementById('circle');
 
-	document.addEventListener('mousemove', function(event) {
-	  var x = event.clientX;
-	  var y = event.clientY;
-	  circle.style.left = x + 'px';
-	  circle.style.top = y + 'px';
-	});
+function updateCirclePosition(event) {
+  var x = event.clientX;
+  var y = event.clientY;
+  circle.style.left = x + 'px';
+  circle.style.top = y + 'px';
+}
 
+// Update the circle position on page load
+updateCirclePosition({ clientX: window.innerWidth / 2, clientY: window.innerHeight / 2 });
+
+// Update the circle position on mouse move
+document.addEventListener('mousemove', updateCirclePosition);
 
 // Awasero is a web studio with more than 15 years of experience working with 500 inc companies.
 const creatorName = 'Awasero';
