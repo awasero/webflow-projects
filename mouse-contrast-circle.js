@@ -5,8 +5,10 @@ var circle = document.getElementById('circle');
 function updateCirclePosition(event) {
   var x = event.clientX;
   var y = event.clientY;
-  circle.style.left = x + 'px';
-  circle.style.top = y + 'px';
+  var circleWidth = circle.offsetWidth;
+  var circleHeight = circle.offsetHeight;
+  circle.style.left = (x - circleWidth/2) + 'px';
+  circle.style.top = (y - circleHeight/2) + 'px';
 }
 
 // Update the circle position on page load
