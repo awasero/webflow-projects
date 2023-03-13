@@ -3,8 +3,8 @@
 var circle = document.getElementById('circle');
 
 function updateCirclePosition(event) {
-  var x = event.clientX;
-  var y = event.clientY;
+  var x = event.clientX + window.pageXOffset;
+  var y = event.clientY + window.pageYOffset;
   var circleWidth = circle.offsetWidth;
   var circleHeight = circle.offsetHeight;
   circle.style.left = (x - circleWidth/2) + 'px';
